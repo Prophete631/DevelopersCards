@@ -1,0 +1,37 @@
+[
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"John",
+    "lastName":"Doe",
+    "github": "https://github.com/doe",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.doe.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+},
+
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"Anna",
+    "lastName":"Smith",
+    "github": "https://github.com/AnSmith",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.myWebSmite.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+},
+
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"Peter",
+    "lastName":"Jones",
+    "github": "https://github.com/pjones",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.myjones.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+ }
+]

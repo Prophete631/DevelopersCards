@@ -1,0 +1,48 @@
+*{
+  margin: 0px;
+}
+.navigation {
+  background-color: darkblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+.navigation ul {
+  font-style: none;
+  text-align: center;
+  width: 100%;
+}
+.navigation li{
+  display: inline;
+  margin: auto;
+  width: 50%;
+}
+input[type="text"]{
+  font-size: 1.5em;
+}
+select {
+  height: 26px;
+  margin: 0px;
+}
+
+select, option{
+  margin: 0px;
+  padding: 0px;
+font-size: 1em;
+}
+input {
+  font-size: 1.5em;
+}
+
+/** style all the cards*/
+.card{
+  border: 1px solid black;
+  margin: 5px;
+  width: 400px;
+}
+.card img{
+  height: 100px;
+  width: 100px;
+}
