@@ -7,6 +7,7 @@
     "myStyles": "cssCardStyle",
     "personalWebsite": "www.doe.com",
     "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
 },
@@ -19,6 +20,7 @@
     "myStyles": "cssCardStyle",
     "personalWebsite": "www.myWebSmite.com",
     "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
 },
@@ -31,6 +33,7 @@
     "myStyles": "cssCardStyle",
     "personalWebsite": "www.myjones.com",
     "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
  }

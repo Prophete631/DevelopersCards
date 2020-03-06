@@ -1,32 +1,74 @@
 //where all the variables declaring variables
+//@import {cd} from "./people/students/students.json";
+let students = [
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"John",
+    "lastName":"Doe",
+    "github": "https://github.com/doe",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.doe.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+},
 
-let students = {};  // variables that hold the students data
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"Anna",
+    "lastName":"Smith",
+    "github": "https://github.com/AnSmith",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.myWebSmite.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+},
+
+  {
+    "email": "myemail@gmail.com",
+    "firstName":"Peter",
+    "lastName":"Jones",
+    "github": "https://github.com/pjones",
+    "myStyles": "cssCardStyle",
+    "personalWebsite": "www.myjones.com",
+    "personalPhoto": "./assests/personalPhoto",
+    "title": "Web Developer",
+    "yearStartToEnd": "['2020', '2021']",
+    "skills": ["html", "css", "javascript", "phtotoshop"]
+ }
+]// variables that hold the students data
 let section = document.getElementById("cardSec");
 
 // where all functions or methods declarations start
 
 // methods that get the data and assign it to a variable
-let getStudentsData = (valueTo, vallueFrom)=>{
-  fetch(vallueFrom)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      return students = Object.assign(valueTo, data);
-    });
-}
+// let getStudentsData = (valueTo, vallueFrom)=>{
+//   console.log("fetch");
+//   fetch(vallueFrom)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
+//       return students = Object.assign(valueTo, data);
+//     });
+// }
 // create photo sectiion
 let the_photo = ()=> {
-  let student_photo = document.createElement("img");
+  let student_photo = document.createElement("IMG");
+  student_photo.setAttribute("src", "./assets/photoOfStudents/k.jpg");
+
   return student_photo;
 }
 // create tiltle section
-let createTitle =()=> {
-  let  h1_title = document.createElement("h1");
-  let  title = document.createTextNode("Web developer");
+let create_title = (result)=> {
+  let  h1_title = document.createElement("H1");
+  let  title = document.createTextNode(result);
     h1_title.classList.add("title");
     h1_title.appendChild(title);
-   return title;
+   return h1_title;
 }
 // create full name section
 let full_name= ()=> {
@@ -35,10 +77,12 @@ let full_name= ()=> {
   let p_lastName = document.createElement("P");
   let firstName = document.createTextNode("Jenny");
   let lastName = document.createTextNode("Cesar");
+
   p_firstName.appendChild(firstName);
   p_lastName.appendChild(lastName);
   name.appendChild(p_firstName);
   name.appendChild(p_lastName);
+  name.classList.add("name");
 
   return name;
 }
@@ -49,9 +93,10 @@ let both_years = ()=> {
   let p_endYear = document.createElement("P");
   let sart_year = document.createTextNode("2020");
   let end_year = document.createTextNode("2021");
-  p_startYear.appendChild(startYear);
-  p_endYear.appendChild(endYear);
+  p_startYear.appendChild(sart_year);
+  p_endYear.appendChild(end_year);
 
+  years.classList.add("years")
   years.appendChild(p_startYear);
   years.appendChild(p_endYear);
 
@@ -77,36 +122,62 @@ let the_website = ()=> {
   a_tag_website.appendChild(my_website_link);
   p_myWebsite.appendChild(a_tag_website);
 
+ website.classList.add("website");
   website.appendChild(p_gitHub);
   website.appendChild(p_myWebsite)
 
   return website;
 }
+let create_img_element = (el)=>{
+  let img = document.createElement("img");
+  img.setAttribute("src", `./assets/logos/${el}`);
+      return img;
+}
+let create_skills = (ele)=> {
+  let skills = document.createElement("DIV");
+  skills.classList.add("skills");
+  skills.appendChild(create_img_element(`html5.png`));
+  return skills;
+}
 
 
-let createCards =()=> {
+let create_cards =(result)=> {
     //declaring and creating all the element to create a card
   let articles = document.createElement("ARTICLE");
   let cards_container = document.createElement("DIV");
   let card_frame = document.createElement("DIV");
 
+// adding the elements to the card
+card_frame.appendChild(the_photo());
+card_frame.appendChild(create_title(result));
+card_frame.appendChild(full_name());
+card_frame.appendChild(both_years());
+card_frame.appendChild(the_website());
+card_frame.appendChild(create_skills());
 
-let skills = document.createElement("DIV");
+cards_container.appendChild(card_frame);
+articles.appendChild(cards_container);
 
+  //classes to DI
+  card_frame.classList.add("card_frame");
+  cards_container.classList.add("cards_container");
+  //section.appendChild(articles);
 
-  articles.appendChild(cards_container);
-  cards_container.style.backgroundColor ="blue";
-  cards_container.style.width ="200px";
-  cards_container.style.height ="200px";
-
-  section.appendChild(articles);
+  return articles;
 }
 
+// cresting the the function to distrubute the card on the app
+let addAllcard = (result)=> {
+  console.log("allcard");
+  return section.appendChild(create_cards(result));
+}
 // where all functions or methods calling start
 
 // calling the get student data methods to assign the data to student when window load
 window.onload = ()=>{
-  getStudentsData(students, "./people/students/students.json");
-  createCards();
+//   while(sutdents.length == 0){
+//   getStudentsData(students, "./people/students/students.json");
+// }
+  addAllcard(students[0].title);
   console.log(students);
 }
