@@ -37,12 +37,66 @@ input {
 }
 
 /** style all the cards*/
-.card{
+
+.cards_container{
   border: 1px solid black;
   margin: 5px;
-  width: 400px;
+  width: 350px;
+  height: 150px;
 }
-.card img{
+
+.card_frame {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+}
+
+.cards_container img{
+  grid-column: 1/2;
+  grid-row: 1/3;
   height: 100px;
   width: 100px;
+  margin: 2px;
 }
+.title {
+  grid-column: 2/5;
+  align-content: center;
+  text-align: center;
+  margin: 10px;
+}
+.name {
+  grid-column: 2/5;
+  grid-row: 2;
+}
+.card_frame p{
+  margin: 2px;
+  font-weight: bold;
+}
+.years{
+  grid-column: 2/3;
+  grid-row: 3;
+}
+.website {
+  grid-column: 3/5;
+  grid-row: 3;
+}
+.name,
+.years,
+.website,
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   margin: auto;
+}
+.skills {
+  grid-column: 1/5;
+  grid-row: 4;
+
+}
+.skills img {
+  width: 40px;
+  height: 40px;
+}
+/** finished styling all the cards*/

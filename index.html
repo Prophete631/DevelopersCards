@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <header>
-    <title>Developer Cards</title>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./cssStyles/stylesreset.css">
     <link rel="stylesheet" href="./cssStyles/mainStyle.css">
-  </header>
+    <title>Developer Cards</title>
+  </head>
 <body>
   <header> <!-- the head of the app -->
     <nav class="navigation"> <!-- top navigation -->
@@ -20,15 +20,43 @@
         <li>
           <input type="text" placeholder="search" /> <!-- serch profile by first or last name -->
         </li>
-      <ul>
+      </ul>
     </nav>
   </header>
 
   <main class="main_app"> <!-- contain the main info about the page-->
-    <section>
-      <article class="card">
+    <section id="cardSec">
+      <article>
+        <div class="cards_container">
         <div class="card_frame">
-          <img src="./assets/photoOfStudents/photoDefault.png" />
+          <img src="./assets/photoOfStudents/k.jpg" />
+          <h1 class="title">Web Developer </h1>
+          <div class=name>
+            <p class="firstName"> Jenny</p>
+            <p class="lastName"> Cesar</p>
+        </div>
+        <div class="years">
+          <p class="endYear"> 2020</p>
+          <p class="startYear"> 2021</p>
+      </div>
+      <div class="website">
+        <p class="github">
+            <a href="https://github.com/Prophete631/DevelopersCards">
+              github
+           </a>
+        </p> -
+      <p class="myWebsite">
+          <a href="https://github.com/Prophete631/DevelopersCards">
+            my website
+         </a>
+      </p>
+    </div>
+    <div class="skills">
+      <img src="./assets/logos/html5.png">
+      <img src="./assets/logos/javascript.png">
+      <img src="./assets/logos/photoshop.png">
+      <img src="./assets/logos/react.png">
+    </div>
         </div>
       </article>
     </section>
@@ -37,3 +65,4 @@
 
 <script type="text/javascript" src="javaScript.js"></script>
 </body>
+</html>
