@@ -12,7 +12,7 @@ let students = [
     "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
-},
+  },
 
   {
     "email": "myemail@gmail.com",
@@ -25,7 +25,7 @@ let students = [
     "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
-},
+  },
 
   {
     "email": "myemail@gmail.com",
@@ -38,7 +38,7 @@ let students = [
     "title": "Web Developer",
     "yearStartToEnd": "['2020', '2021']",
     "skills": ["html", "css", "javascript", "phtotoshop"]
- }
+  }
 ]// variables that hold the students data
 let section = document.getElementById("cardSec");
 
@@ -66,17 +66,17 @@ let the_photo = ()=> {
 let create_title = (result)=> {
   let  h1_title = document.createElement("H1");
   let  title = document.createTextNode(result);
-    h1_title.classList.add("title");
-    h1_title.appendChild(title);
-   return h1_title;
+  h1_title.classList.add("title");
+  h1_title.appendChild(title);
+  return h1_title;
 }
 // create full name section
-let full_name= ()=> {
+let full_name= (firstName_v, lastName_v)=> {
   let name = document.createElement("DIV");
   let p_firstName = document.createElement("P");
   let p_lastName = document.createElement("P");
-  let firstName = document.createTextNode("Jenny");
-  let lastName = document.createTextNode("Cesar");
+  let firstName = document.createTextNode(firstName_v);
+  let lastName = document.createTextNode(lastName_v);
 
   p_firstName.appendChild(firstName);
   p_lastName.appendChild(lastName);
@@ -87,12 +87,12 @@ let full_name= ()=> {
   return name;
 }
 // create years section
-let both_years = ()=> {
+let both_years = (theYears)=> {
   let years = document.createElement("DIV");
   let p_startYear = document.createElement("P");
   let p_endYear = document.createElement("P");
-  let sart_year = document.createTextNode("2020");
-  let end_year = document.createTextNode("2021");
+  let sart_year = document.createTextNode(`${ theYears[0] }`);
+  let end_year = document.createTextNode(`${ theYears[1] }`);
   p_startYear.appendChild(sart_year);
   p_endYear.appendChild(end_year);
 
@@ -122,7 +122,7 @@ let the_website = ()=> {
   a_tag_website.appendChild(my_website_link);
   p_myWebsite.appendChild(a_tag_website);
 
- website.classList.add("website");
+  website.classList.add("website");
   website.appendChild(p_gitHub);
   website.appendChild(p_myWebsite)
 
@@ -131,7 +131,7 @@ let the_website = ()=> {
 let create_img_element = (el)=>{
   let img = document.createElement("img");
   img.setAttribute("src", `./assets/logos/${el}`);
-      return img;
+  return img;
 }
 let create_skills = (ele)=> {
   let skills = document.createElement("DIV");
@@ -141,22 +141,22 @@ let create_skills = (ele)=> {
 }
 
 
-let create_cards =(result)=> {
-    //declaring and creating all the element to create a card
+let create_cards =(title_v, firstName_v, astName_v, theYears)=> {
+  //declaring and creating all the element to create a card
   let articles = document.createElement("ARTICLE");
   let cards_container = document.createElement("DIV");
   let card_frame = document.createElement("DIV");
 
-// adding the elements to the card
-card_frame.appendChild(the_photo());
-card_frame.appendChild(create_title(result));
-card_frame.appendChild(full_name());
-card_frame.appendChild(both_years());
-card_frame.appendChild(the_website());
-card_frame.appendChild(create_skills());
+  // adding the elements to the card
+  card_frame.appendChild(the_photo());
+  card_frame.appendChild(create_title(title_v));
+  card_frame.appendChild(full_name(firstName_v, astName_v));
+  card_frame.appendChild(both_years(theYears));
+  card_frame.appendChild(the_website());
+  card_frame.appendChild(create_skills());
 
-cards_container.appendChild(card_frame);
-articles.appendChild(cards_container);
+  cards_container.appendChild(card_frame);
+  articles.appendChild(cards_container);
 
   //classes to DI
   card_frame.classList.add("card_frame");
@@ -167,17 +167,26 @@ articles.appendChild(cards_container);
 }
 
 // cresting the the function to distrubute the card on the app
-let addAllcard = (result)=> {
+let addAllcard = (title_v, firstName_v,lastName_v, theYears)=> {
   console.log("allcard");
-  return section.appendChild(create_cards(result));
+  return section
+  .appendChild(create_cards(title_v,
+    firstName_v,
+    lastName_v,
+    theYears
+  ));
 }
 // where all functions or methods calling start
 
 // calling the get student data methods to assign the data to student when window load
 window.onload = ()=>{
-//   while(sutdents.length == 0){
-//   getStudentsData(students, "./people/students/students.json");
-// }
-  addAllcard(students[0].title);
-  console.log(students);
-}
+  //   while(sutdents.length == 0){
+  //   getStudentsData(students, "./people/students/students.json");
+  // }
+  addAllcard(
+    students[0].title,
+    students[0].firstName,
+    students[0].lastName,
+    students[0].yearStartToEnd);
+    console.log(students);
+  }
