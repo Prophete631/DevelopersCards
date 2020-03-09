@@ -35,6 +35,13 @@ font-size: 1em;
 input {
   font-size: 1.5em;
 }
+#cardSec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
 
 /** style all the cards*/
 
@@ -93,10 +100,30 @@ input {
 .skills {
   grid-column: 1/5;
   grid-row: 4;
-
 }
 .skills img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 /** finished styling all the cards*/
+
+@media only screen and (max-width: 600px) {
+  #cardSec {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1098px) {
+  #cardSec {
+    width: 85%;
+    align-items: center;
+    grid-gap: 1px;
+    text-align: center;
+  }
+
+}
+article{
+}
+.letterStyle{
+  
+}

@@ -1,47 +1,135 @@
 //where all the variables declaring variables
 //@import {cd} from "./people/students/students.json";
+('use strict')
 let students = [
   {
-    "email": "myemail@gmail.com",
-    "firstName":"John",
-    "lastName":"Doe",
-    "github": "https://github.com/doe",
-    "myStyles": "cssCardStyle",
-    "personalWebsite": "www.doe.com",
-    "personalPhoto": "./assests/personalPhoto",
+    "email": "AinsIeyan@gmail.com",
+    "firstName":"Ains",
+    "lastName":"Ieyan",
+    "myStyles": "letterStyle",
+    "personalWebsites": ["www.Ains.com","https://github.com/Ains"],
+    //"personalPhoto": "./assets/photoOfStudents/",
     "title": "Web Developer",
-    "yearStartToEnd": "['2020', '2021']",
-    "skills": ["html", "css", "javascript", "phtotoshop"]
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
   },
-
   {
-    "email": "myemail@gmail.com",
-    "firstName":"Anna",
-    "lastName":"Smith",
-    "github": "https://github.com/AnSmith",
+    "email": "AkonDon@gmail.com",
+    "firstName":"Akon",
+    "lastName":"Don",
     "myStyles": "cssCardStyle",
-    "personalWebsite": "www.myWebSmite.com",
-    "personalPhoto": "./assests/personalPhoto",
-    "title": "Web Developer",
-    "yearStartToEnd": "['2020', '2021']",
-    "skills": ["html", "css", "javascript", "phtotoshop"]
+    "personalWebsites": ["www.Don.com","https://github.com/Don"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Designer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3","AI", "photoshop"]
   },
-
   {
-    "email": "myemail@gmail.com",
-    "firstName":"Peter",
-    "lastName":"Jones",
-    "github": "https://github.com/pjones",
+    "email": "BillSims@gmail.com",
+    "firstName":"Bill",
+    "lastName":"Sims",
     "myStyles": "cssCardStyle",
-    "personalWebsite": "www.myjones.com",
-    "personalPhoto": "./assests/personalPhoto",
+    "personalWebsites": ["www.Sims.com","https://github.com/Sims"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Designer",
+    "yearStartToEnd": ["2011", "2021"],
+    "skills": ["AI", "photoshop"]
+  },
+  {
+    "email": "DannyBryan@gmail.com",
+    "firstName":"Bryan",
+    "lastName":"Danny",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.Bryan.com","https://github.com/Bryan"],
+    //"personalPhoto": "./assets/photoOfStudents/",
     "title": "Web Developer",
-    "yearStartToEnd": "['2020', '2021']",
-    "skills": ["html", "css", "javascript", "phtotoshop"]
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript"]
+  },
+  {
+    "email": "ErickDynasty@gmail.com",
+    "firstName":"Erick",
+    "lastName":"Dynasty",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.Dynasty.com","https://github.com/Dynasty"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
+  },
+  {
+    "email": "JackRyan@gmail.com",
+    "firstName":"Jack",
+    "lastName":"Ryan",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.Ryan.com","https://github.com/Ryan"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
+  },
+  {
+    "email": "JessicaBella@gmail.com",
+    "firstName":"Jessica",
+    "lastName":"Bella",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.Jessica.com","https://github.com/Jessica"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Photoshop Master",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["photoshop"]
+  },
+  {
+    "email": "ZackaryKelsy@gmail.com",
+    "firstName":"Kelsy",
+    "lastName":"Zackary",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.Kelsy.com","https://github.com/Kelsy"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
+  },
+  {
+    "email": "SussieDisney@gmail.com",
+    "firstName":"Sussie",
+    "lastName":"Disney",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["https://www.disney.com/","https://github.com/Disney"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
+  },
+  {
+    "email": "YohanAmazon@gmail.com",
+    "firstName":"Yohan",
+    "lastName":"Amazon",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["https://www.Amazon.com","https://github.com/Amazon"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop"]
+  },
+  {
+    "email": "kannyDestroys@gmail.com",
+    "firstName":"kanny",
+    "lastName":"Destroys",
+    "myStyles": "cssCardStyle",
+    "personalWebsites": ["www.kanny.com","https://github.com/kanny"],
+    //"personalPhoto": "./assets/photoOfStudents/",
+    "title": "Web Developer",
+    "yearStartToEnd": ["2020", "2021"],
+    "skills": ["html5", "css3", "javascript", "photoshop","sass"]
   }
 ]// variables that hold the students data
-let section = document.getElementById("cardSec");
 
+
+let section = document.getElementById("cardSec");
+let search = document.getElementById("search_student");
+let studentCard = document.getElementsByClassName("article");
+let options = document.getElementById("options");
 // where all functions or methods declarations start
 
 // methods that get the data and assign it to a variable
@@ -56,9 +144,9 @@ let section = document.getElementById("cardSec");
 //     });
 // }
 // create photo sectiion
-let the_photo = ()=> {
+let the_photo = (stud_fullName)=> {
   let student_photo = document.createElement("IMG");
-  student_photo.setAttribute("src", "./assets/photoOfStudents/k.jpg");
+  student_photo.setAttribute("src", `./assets/photoOfStudents/${stud_fullName}.jpg`);
 
   return student_photo;
 }
@@ -70,8 +158,17 @@ let create_title = (result)=> {
   h1_title.appendChild(title);
   return h1_title;
 }
+// adding email functions
+let studentEmail = (email)=>{
+  let emailLink = document.createElement("A");
+  let textLink = document.createTextNode("@");
+
+  emailLink.href= `mailto:${email}`;
+  emailLink.appendChild(textLink);
+  return emailLink;
+}
 // create full name section
-let full_name= (firstName_v, lastName_v)=> {
+let full_name= (firstName_v, lastName_v, email)=> {
   let name = document.createElement("DIV");
   let p_firstName = document.createElement("P");
   let p_lastName = document.createElement("P");
@@ -80,6 +177,7 @@ let full_name= (firstName_v, lastName_v)=> {
 
   p_firstName.appendChild(firstName);
   p_lastName.appendChild(lastName);
+  p_lastName.appendChild(studentEmail(email));
   name.appendChild(p_firstName);
   name.appendChild(p_lastName);
   name.classList.add("name");
@@ -103,8 +201,8 @@ let both_years = (theYears)=> {
   return years;
 }
 
-// create the website section
-let the_website = ()=> {
+// create the website section and pull the web site from the student
+let the_website = (links)=> {
   let website = document.createElement("DIV");
   let p_gitHub = document.createElement("P");
   let p_myWebsite = document.createElement("P");
@@ -113,8 +211,11 @@ let the_website = ()=> {
   let git_link = document.createTextNode("github");
   let my_website_link = document.createTextNode("my website");
 
-  a_tag_git.href = "https://github.com/Prophete631/DevelopersCards";
-  a_tag_website.href = "https://github.com/Prophete631/DevelopersCards";
+  //a_tag_git.href = `${links[1]}`;
+  //a_tag_website.href = `${links[0]}`;
+  a_tag_website.setAttribute("href", `${links[0]}`);
+  a_tag_git.setAttribute("href", `${links[1]}`);
+
 
   a_tag_git.appendChild(git_link);
   p_gitHub.appendChild(a_tag_git);
@@ -128,65 +229,104 @@ let the_website = ()=> {
 
   return website;
 }
+// method that pull the logos fot the skills from assest
 let create_img_element = (el)=>{
   let img = document.createElement("img");
   img.setAttribute("src", `./assets/logos/${el}`);
   return img;
 }
-let create_skills = (ele)=> {
+// method that add the skills on the card
+let create_skills = (logos)=> {
   let skills = document.createElement("DIV");
+  for(let i = 0; i<logos.length; i++){
+    skills.appendChild(create_img_element(`${logos[i]}.png`));
+  }
   skills.classList.add("skills");
-  skills.appendChild(create_img_element(`html5.png`));
   return skills;
 }
 
-
-let create_cards =(title_v, firstName_v, astName_v, theYears)=> {
+// create a card
+let create_cards =(title_v, firstName_v, lastName_v, email, theYears, website, skills, studentStyle)=> {
   //declaring and creating all the element to create a card
   let articles = document.createElement("ARTICLE");
   let cards_container = document.createElement("DIV");
   let card_frame = document.createElement("DIV");
 
   // adding the elements to the card
-  card_frame.appendChild(the_photo());
+  card_frame.appendChild(the_photo(`${firstName_v}${lastName_v}`));
   card_frame.appendChild(create_title(title_v));
-  card_frame.appendChild(full_name(firstName_v, astName_v));
+  card_frame.appendChild(full_name(firstName_v, lastName_v, email));
   card_frame.appendChild(both_years(theYears));
-  card_frame.appendChild(the_website());
-  card_frame.appendChild(create_skills());
+  card_frame.appendChild(the_website(website));
+  card_frame.appendChild(create_skills(skills));
 
   cards_container.appendChild(card_frame);
   articles.appendChild(cards_container);
 
   //classes to DI
   card_frame.classList.add("card_frame");
+  card_frame.classList.add(`${studentStyle}`);
   cards_container.classList.add("cards_container");
-  //section.appendChild(articles);
-
+  articles.classList.add("article");
   return articles;
 }
 
 // cresting the the function to distrubute the card on the app
-let addAllcard = (title_v, firstName_v,lastName_v, theYears)=> {
-  console.log("allcard");
+let addAllcard = (title_v, firstName_v,lastName_v, email, theYears,website, skill, studentStyle)=> {
   return section
   .appendChild(create_cards(title_v,
     firstName_v,
     lastName_v,
-    theYears
+    email,
+    theYears,
+    website,
+    skill,
+    studentStyle
   ));
+}
+
+//creating methods to remove card on document
+let removeCard = ()=>{
+  studentCard = document.getElementsByClassName("article");
+
+  for(let i = studentCard.length-1; i >= 0; i--){
+    console.log(studentCard[i]);
+    section.removeChild(studentCard[i])
+
+  }
 }
 // where all functions or methods calling start
 
 // calling the get student data methods to assign the data to student when window load
 window.onload = ()=>{
-  //   while(sutdents.length == 0){
-  //   getStudentsData(students, "./people/students/students.json");
-  // }
-  addAllcard(
-    students[0].title,
-    students[0].firstName,
-    students[0].lastName,
-    students[0].yearStartToEnd);
-    console.log(students);
-  }
+
+  search.addEventListener("input", ()=>{
+    removeCard();
+    let filteredStudent = students.filter(student =>{
+      let names = `${student.firstName.toLowerCase()} ${student.lastName.toLowerCase()}`
+
+      if(student !== undefined && names.includes(search.value.toLowerCase())){
+        addAllcard(student.title,
+          student.firstName,
+          student.lastName,
+          student.email,
+          student.yearStartToEnd,
+          student.personalWebsites,
+          student.skills,
+          student.myStyles
+        );
+      }
+    })
+  })
+students.map(student =>{
+  addAllcard(student.title,
+    student.firstName,
+    student.lastName,
+    student.email,
+    student.yearStartToEnd,
+    student.personalWebsites,
+    student.skills,
+    student.myStyles
+  );
+})
+}
